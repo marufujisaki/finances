@@ -39,7 +39,7 @@ const Calendar = ({ year, month }: { year: number; month: number }) => {
       </div>
       <div className="calendar-body">
         {days.map((day, index) => (
-          <div key={index} className={`calendar-cell ${day ? "" : "empty"}`}>
+          <div key={index} className={`calendar-cell general ${day ? "" : "empty"}`}>
             {day}
           </div>
         ))}

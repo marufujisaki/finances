@@ -1,10 +1,12 @@
 import { useState } from "react";
 
 import "./MonthSelector.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 interface MonthSelectorProps {
-    onMonthChange: (newDate: Date) => void;
-  }
+  onMonthChange: (newDate: Date) => void;
+}
 
 const MonthsSelector: React.FC<MonthSelectorProps> = ({ onMonthChange }) => {
   const months = [
@@ -56,17 +58,20 @@ const MonthsSelector: React.FC<MonthSelectorProps> = ({ onMonthChange }) => {
     <div className="month-selector">
       {/* Left Arrow */}
       <button className="arrow" onClick={handlePrevious}>
-        &lt;
+        <FontAwesomeIcon icon={faChevronLeft} />
       </button>
 
       {/* Month Display */}
-      <div className="month-display" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+      <div
+        className="month-display"
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      >
         {months[month]} {year}
       </div>
 
       {/* Right Arrow */}
       <button className="arrow" onClick={handleNext}>
-        &gt;
+        <FontAwesomeIcon icon={faChevronRight} />
       </button>
 
       {/* Dropdown */}
