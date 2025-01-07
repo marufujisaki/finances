@@ -1,18 +1,19 @@
-.debts-container {
+.bills-container {
   width: 90%;
   background-color: #fafafa;
   padding: 1rem;
   border-radius: 5%;
+  margin: 0.75rem 0;
 }
 
-.debts-header {
+.bills-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Montserrat", serif;
 }
 
-.debts-title {
+.bills-title {
   font-weight: bold;
   margin: 0.5rem 0;
 }
@@ -25,13 +26,13 @@
   }
 }
 
-.debt {
+.bill {
   font-family: "Montserrat", serif;
   font-size: 0.8rem;
   display: grid;
   margin: 0.5rem auto;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 50px 1fr;
 
   .button {
     justify-self: end;

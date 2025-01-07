@@ -1,0 +1,79 @@
+.wishlist {
+  width: 90%;
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 5%;
+}
+
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", serif;
+}
+
+.wishlist-title {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.add {
+  font-size: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    color: #ffb3c6;
+  }
+}
+
+.wish {
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+  display: grid;
+  margin: 0.5rem auto;
+  align-items: center;
+  grid-template-columns: 50px 1fr 1fr;
+
+  .amount {
+    justify-self: end;
+  }
+  input[type="checkbox"] {
+    /* Hide the default checkbox appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 2px solid #888;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Checked state */
+    &:checked {
+      background-color: #4caf50;
+      border-color: #4caf50;
+      position: relative;
+
+      /* Add a custom checkmark */
+      &:before {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 12px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0px;
+        left: 6px;
+      }
+    }
+
+    /* Hover effect */
+    &:hover {
+      border-color: #555;
+    }
+  }
+}

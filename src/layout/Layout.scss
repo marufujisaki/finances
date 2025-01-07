@@ -14,3 +14,15 @@
 .right {
   width: 70%;
 }
+
+.expenses {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  .budget-container {
+    width: 65%;
+  }
+  .income-container {
+    width: 35%;
+  }
+}

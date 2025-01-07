@@ -1,0 +1,50 @@
+.income-table {
+  width: 100%;
+  margin: 10px 0;
+  font-family: "Montserrat", serif;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    thead th {
+      background-color: #f6b26b;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+        .add:hover {
+          color: #dd8f3b;
+        }
+      }
+    }
+
+    tbody tr {
+      background-color: #fff;
+      font-size: 0.8rem;
+    }
+
+    .total-row {
+      background-color: #f9cb9c;
+      font-weight: bold;
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+  }
+}

@@ -24,7 +24,11 @@ const Debts = () => {
       </div>
       {example.map((debt, i) => (
         <div key={i} className="debt">
-          {debt.description}
+          <span>{debt.description}</span>
+          <span>${debt.amount}</span>
+          <div className={"button " + (debt.paid && "paid")}>
+            {debt.paid ? "PAID" : "NOT PAID"}
+          </div>
         </div>
       ))}
     </div>

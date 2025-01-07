@@ -1,0 +1,46 @@
+.expenses-table {
+  width: 100%;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  font-family: "Montserrat", serif;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    thead th {
+      background-color: #d5e8d4;
+      color: #333;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    th[colspan="4"] {
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #a9d08e;
+    }
+
+    tbody tr {
+      background-color: #fff;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    td.negative {
+      color: #d9534f; // Red color for negative values
+    }
+
+    td.positive {
+      color: #5cb85c; // Green color for positive values
+    }
+  }
+}
