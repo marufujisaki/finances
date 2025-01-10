@@ -33,10 +33,14 @@ const Budget = () => {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.category}</td>
-              <td>${item.budget.toFixed(2)}</td>
-              <td>${item.actual.toFixed(2)}</td>
-              <td className={item.left < 0 ? "negative" : "positive"}>
+              <td className="category">{item.category}</td>
+              <td className="amount">${item.budget.toFixed(2)}</td>
+              <td className="amount ">${item.actual.toFixed(2)}</td>
+              <td
+                className={
+                  "amount " + (item.left < 0 ? "negative" : "positive")
+                }
+              >
                 ${item.left.toFixed(2)}
               </td>
             </tr>

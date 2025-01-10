@@ -20,12 +20,12 @@ const Debts = () => {
     <div className="debts-container">
       <div className="debts-header">
         <p className="debts-title"> DEBTS </p>
-        <FontAwesomeIcon className="add" icon={faCirclePlus} />
+        <FontAwesomeIcon className="add-debt" icon={faCirclePlus} />
       </div>
       {example.map((debt, i) => (
         <div key={i} className="debt">
           <span>{debt.description}</span>
-          <span>${debt.amount}</span>
+          <span className="amount">${debt.amount.toFixed(2)}</span>
           <div className={"button " + (debt.paid && "paid")}>
             {debt.paid ? "PAID" : "NOT PAID"}
           </div>

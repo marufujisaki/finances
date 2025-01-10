@@ -1,15 +1,18 @@
 .debts-container {
   width: 90%;
-  background-color: #fafafa;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  box-shadow: 1px 2px 13px -6px rgba(0, 0, 0, 0.1);
 }
 
 .debts-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
 }
 
 .debts-title {
@@ -17,41 +20,43 @@
   margin: 0.5rem 0;
 }
 
-.add {
+.add-debt {
   font-size: 1.5rem;
   cursor: pointer;
   &:hover {
-    color: #ffb3c6;
+    color: #565656;
   }
 }
 
 .debt {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", serif;
+  font-weight: 600;
   font-size: 0.8rem;
   display: grid;
   margin: 0.5rem auto;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 190px 1fr;
 
+  .amount {
+    font-weight: 500;
+    font-family: "DM Mono", serif;
+  }
   .button {
     justify-self: end;
-    padding: 0.5rem 1rem;
-    background-color: #fee2e2;
-    color: red;
-    font-size: 0.6rem;
-    border: 1px solid red;
-    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+    background-color: #f72c2c;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 1rem;
     cursor: pointer;
     width: 50%;
     text-align: center;
     &:hover {
-      background-color: #ef4444;
-      color: white;
+      background-color: #22c55e;
     }
     &.paid {
-      background-color: #22c55e;
-      border-color: #22c55e;
-      color: #fff;
+      background-color: #101010;
       cursor: auto;
     }
   }

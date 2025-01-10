@@ -1,7 +1,6 @@
 .expenses-table {
   width: 100%;
   margin: 10px 0;
-  font-family: Arial, sans-serif;
   border-collapse: collapse;
   font-family: "Montserrat", serif;
 
@@ -17,8 +16,8 @@
     }
 
     thead th {
-      background-color: #d5e8d4;
-      color: #333;
+      background-color: #323232;
+      color: #fff;
       text-align: center;
       font-size: 0.8rem;
     }
@@ -26,7 +25,8 @@
     th[colspan="4"] {
       font-size: 1rem;
       font-weight: bold;
-      background-color: #a9d08e;
+      background-color: #202020;
+      color: #fff;
     }
 
     tbody tr {
@@ -35,12 +35,20 @@
       text-align: center;
     }
 
+    td.category {
+      font-weight: bold;
+    }
+
+    td.amount {
+      font-family: "DM Mono", serif;
+    }
+
     td.negative {
-      color: #d9534f; // Red color for negative values
+      color: #d9534f;
     }
 
     td.positive {
-      color: #5cb85c; // Green color for positive values
+      color: #5cb85c;
     }
   }
 }

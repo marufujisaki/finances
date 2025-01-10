@@ -33,19 +33,19 @@ const Bills = () => {
   const formatted = example.map((obj) => {
     const day = obj.date.toString().padStart(2, "0"); // Ensure two-digit format for the day
     const month = (today.getMonth() + 1).toString().padStart(2, "0"); // Current month (January)
-    return {...obj, date: `${day}/${month}`};
+    return { ...obj, date: `${day}/${month}` };
   });
   return (
     <div className="bills-container">
       <div className="bills-header">
         <p className="bills-title"> BILLS </p>
-        <FontAwesomeIcon className="add" icon={faCirclePlus} />
+        <FontAwesomeIcon className="add-bill" icon={faCirclePlus} />
       </div>
       {formatted.map((bill, i) => (
         <div key={i} className="bill">
           <span>{bill.description}</span>
-          <span>${bill.amount}</span>
-          <span className="date">{bill.date}</span>
+          <span className="amount">${bill.amount.toFixed(2)}</span>
+          <span className="date">Due {bill.date}</span>
           <div className={"button " + (bill.paid && "paid")}>
             {bill.paid ? "PAID" : "NOT PAID"}
           </div>

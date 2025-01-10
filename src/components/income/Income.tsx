@@ -32,12 +32,12 @@ const Income = () => {
             <tr key={index}>
               <td>{item.source}</td>
               <td>{item.currency}</td>
-              <td>${item.amount.toFixed(2)}</td>
+              <td className="amount">${item.amount.toFixed(2)}</td>
             </tr>
           ))}
           <tr className="total-row">
             <td colSpan={2}>TOTAL</td>
-            <td>${total.toFixed(2)}</td>
+            <td className="amount">${total.toFixed(2)}</td>
           </tr>
         </tbody>
       </table>

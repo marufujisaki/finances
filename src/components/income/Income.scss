@@ -15,7 +15,7 @@
     }
 
     thead th {
-      background-color: #f6b26b;
+      background-color: #202020;
       color: white;
       text-align: center;
       font-size: 1rem;
@@ -26,6 +26,9 @@
         align-items: center;
         p {
           margin: 0;
+        }
+        .add {
+          cursor: pointer;
         }
         .add:hover {
           color: #dd8f3b;
@@ -39,8 +42,12 @@
     }
 
     .total-row {
-      background-color: #f9cb9c;
+      background-color: #e5e5e5;
       font-weight: bold;
+    }
+
+    td.amount {
+      font-family: "DM Mono", serif;
     }
 
     td:last-child {

@@ -29,7 +29,7 @@ const Wishlist = () => {
     <div className="wishlist">
       <div className="wishlist-header">
         <p className="wishlist-title"> WISHLIST </p>
-        <FontAwesomeIcon className="add" icon={faCirclePlus} />
+        <FontAwesomeIcon className="add-wish" icon={faCirclePlus} />
       </div>
       {wishlist.map((item, index) => (
         <div key={index} className="wish">
