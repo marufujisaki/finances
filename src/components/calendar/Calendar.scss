@@ -52,3 +52,15 @@
 .empty {
   background-color: #f4f4f4;
 }
+
+.today {
+  > * {
+    background-color: #f72c2c;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+  }
+}

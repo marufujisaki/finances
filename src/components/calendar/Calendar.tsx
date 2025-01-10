@@ -4,6 +4,12 @@ const Calendar = ({ year, month }: { year: number; month: number }) => {
   // Days of the week
   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
+  // Get today's date
+  const today = new Date();
+  const todayDate = today.getDate();
+  const todayMonth = today.getMonth();
+  const todayYear = today.getFullYear();
+
   // Generate dates for the calendar
   const getDaysInMonth = (year: number, month: number) => {
     const days = [];
@@ -39,8 +45,15 @@ const Calendar = ({ year, month }: { year: number; month: number }) => {
       </div>
       <div className="calendar-body">
         {days.map((day, index) => (
-          <div key={index} className={`calendar-cell general ${day ? "" : "empty"}`}>
-            {day}
+          <div
+            key={index}
+            className={`calendar-cell general ${day ? "" : "empty"} ${
+              day === todayDate && month === todayMonth && year === todayYear
+                ? "today"
+                : ""
+            }`}
+          >
+            <span>{day}</span>
           </div>
         ))}
       </div>
